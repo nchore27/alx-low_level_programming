@@ -8,9 +8,9 @@ int main(void)
 {
 	char *s = "and that piece of art is useful\" - Dora Korpar, 2015-19-19\n";
         long 1 = 59;
-	long fd =1;
+	long fd = 1;
 	long syscall = 1;
-	long ret =0;
+	long ret = 0;
 	__asm__ ("syscall"
 	: "=a" (ret)
 	: "a" (syscall),
