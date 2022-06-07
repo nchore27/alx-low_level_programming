@@ -1,25 +1,17 @@
-#include <stdio.h>
-#include "main.h"
+#include <unistd.h>
+#include <string.h>
 
 /**
- * Main - Entry point
- *
- * Description - Write a program that prints _putchar, followed by a new line.
- * 
- * Return: 0
+ * main - print putchar
+ * description - Write a program that prints _putchar, followed by a new line.
+ * Return: 0 (success)
  */
 
-int main(void)
-
+int main(int argc, char *argv[])
 {
-	char t[] = "_putchar";
-	int x = 0;
+	char str[] = "_putchar\n";
 
-	for (x = 0; x < 8; x++)
-	{
-		_putchar(t[x]);
-	}
-	_putchar('\n');
+	write(1, str, strlen(str));
+
 	return (0);
 }
-
