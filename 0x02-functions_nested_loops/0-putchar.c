@@ -11,7 +11,7 @@ int main(void)
 {
 	char x[] = "putchar";
 
-	printf("_%s,\n", x);
+	printf("_%s\n", x);
 	
 	return (0);
 }
