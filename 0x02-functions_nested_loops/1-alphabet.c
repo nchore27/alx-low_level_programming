@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * Main - Print alphabets
+ * print_alphabet - print a to z
  *
  * Description - Write a function that prints the alphabet, in lowercase, followed by a new line.
  *
