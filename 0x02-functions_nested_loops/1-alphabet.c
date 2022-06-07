@@ -3,7 +3,7 @@
 /**
  * print_alphabet - print a to z
  *
- * Description - Write a function that prints the alphabet, in lowercase, followed by a new line.
+ * Description - function that prints the alphabet followed by a new line.
  *
  * Return: 0
  */
