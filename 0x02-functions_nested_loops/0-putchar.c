@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char x[] = "putchar";
+	char x[21] = "putchar";
 
 	printf("_%s\n", x);
 	return (0);
