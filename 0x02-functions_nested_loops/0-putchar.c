@@ -1,12 +1,12 @@
-#include <unistd.h>
 #include <stdio.h>
 
 /**
- * Main - Write a program that prints _putchar, followed by a new line.
+ * Main - Entry point
+ * Description - Write a program that prints _putchar, followed by a new line.
  * Return: 0
  */
 
-int _putchar(void)
+int main(void)
 {
 	char x[] = "putchar";
 
