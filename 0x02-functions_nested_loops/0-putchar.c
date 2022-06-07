@@ -1,12 +1,10 @@
-#include "main.h"
- /**
- * 
+#include <stdio.h>
+ /** 
  * main - print _putchar
  *
  * Description: write a program that prints _putchar followed by a new line.
  * 
  *Return: 0
- *
  */
 int main(void)
 {
