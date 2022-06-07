@@ -7,7 +7,8 @@
  * Return: 0
  */
 
-int main(){
+int main(void)
+{
 	char x[] = "putchar";
 
 	printf("_%s,\n", x);
