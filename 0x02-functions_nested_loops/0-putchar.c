@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-int main(void)
+int _putchar(char s)
 {
 	char x[] = "putchar";
 
