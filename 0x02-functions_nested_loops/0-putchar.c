@@ -1,17 +1,24 @@
-#include <unistd.h>
-#include <string.h>
-
+#include <stdio.h>
+#include "main.h"
+ 
 /**
- * main - print putchar
- * description - Write a program that prints _putchar, followed by a new line.
- * Return: 0 (success)
+ * main - print _putchar
+ * Description: write a program that prints _putchar followed by a new line.
+ * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(void)
 {
-	char str[] = "_putchar\n";
-
-	write(1, str, strlen(str));
+	fputchar('_');
+	fputchar('p');
+	fputchar('u');
+	fputchar('t');
+	fputchar('c');
+	fputchar('h');
+	fputchar('a');
+	fputchar('r');
+	fputchar('\n');
 
 	return (0);
 }
+
