@@ -7,9 +7,16 @@
  */
 
 int main(void)
-{
-	char x[21] = "putchar";
 
-	printf("_%s\n", x);
+{
+	char text[9] = "_putchar";
+	int i = 0;
+
+	for (i = 0; i < 8; i++)
+	{
+		fputchar(text[i]);
+	}
+	fputchar('\n');
 	return (0);
 }
+
