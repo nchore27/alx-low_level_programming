@@ -13,7 +13,7 @@ void print_times_table(int n)
 	{
 		for (d = 0; d <= n; d++)
 		{
-			for ( = 0; e <= n; e++)
+			for (e = 0; e <= n; e++)
 			{
 				f = d * e;
 				if (f > 99)
