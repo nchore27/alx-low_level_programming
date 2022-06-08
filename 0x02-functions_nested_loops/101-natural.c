@@ -18,5 +18,5 @@ int main(void)
 		u++;
 	}
 	printf("%d\n", v);
-	returb (0);
+	return (0);
 }
