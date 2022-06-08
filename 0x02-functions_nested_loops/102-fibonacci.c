@@ -25,7 +25,6 @@ int main(void)
 		next = q + r;
 
 		q = r;
-		
 		r = next;
 	}
 	return (0);
