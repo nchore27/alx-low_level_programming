@@ -3,6 +3,8 @@
 /**
  * more_numbers - prints 10 times the numbers
  * followed by a new line
+ * @n: number to be printed
+ * @c: number to be printed
  * Return: Void.
  */
 
