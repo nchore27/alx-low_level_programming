@@ -5,7 +5,6 @@
  * followed by a new line
  * Return: Void
  */
-
 void more_numbers(void)
 {
 	int n, c;
@@ -21,7 +20,6 @@ void more_numbers(void)
 				_putchar((n % 10) + '0');
 			}
 		}
-
 		_putchar('\n');
 	}
 }
