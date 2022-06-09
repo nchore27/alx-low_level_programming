@@ -3,9 +3,7 @@
 /**
  * more_numbers - prints 10 times the numbers
  * followed by a new line
- * @n: number to be printed
- * @c: number to be printed
- * Return: Void.
+ * Return: Void
  */
 
 void more_numbers(void)
@@ -23,6 +21,7 @@ void more_numbers(void)
 				_putchar((n % 10) + '0');
 			}
 		}
+
 		_putchar('\n');
 	}
 }
