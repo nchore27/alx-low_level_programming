@@ -8,14 +8,9 @@
 
 void _puts(char *str)
 {
-	char *x;
-	int a;
+	char *str;
 
-	x = str;
-
-	for (a = 0; x[a]; a++)
-	{
-		_putchar(x[a]);
-	}
-	_putchar('\n');
+	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+	_puts(str);
+	return (0);
 }
