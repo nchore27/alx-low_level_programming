@@ -8,21 +8,28 @@
 
 void puts_half(char *str)
 {
-	int Frankley = 0, ln = 0, x;
+	int len, index;
+	
+	len = 0;
 
-	while (str[Frankley])
-		ln++;
-	if ((ln % 2) == 0)
-		x = (ln = 1) / 2;
-
-	else
+	while (str[len] != '\0')
 	{
-		x = (ln + 1) / 2;
+		len++;
 	}
 
-	for (Frankley = x; Frankley < ln; Frankley++)
+	if ((len % 2) != 0)
 	{
-		_putchar(str[Frankley]);
+		index = (len + 1) / 2;
+	}
+	else
+	{
+		index = (len / 2);
+	}
+
+	while (index < len)
+	{
+		_putchar(str[index]);
+		index++;
 	}
 	_putchar('\n');
 }
