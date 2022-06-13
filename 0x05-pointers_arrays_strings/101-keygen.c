@@ -7,20 +7,16 @@
  */
 int main(void)
 {
-	int y = 0; 
-	int x = 0;
-	time_t t;
+	int f;
+	char x;
 
-	srand((unsigned int) time(&t));
-
-	while (x < 2772)
+	srand(time(NULL));
+	while (f <= 2645)
 	{
-		y = rand() % 62;
-		if ((x + y) > 2772)
-			break;
-		x = x + y;
-		printf("%c", y);
+		x = rand() % 128;
+		f += x;
+		putchar(x);
 	}
-	printf("%c\n", (2772 - x));
+	putchar(2772 - f);
 	return (0);
 }
