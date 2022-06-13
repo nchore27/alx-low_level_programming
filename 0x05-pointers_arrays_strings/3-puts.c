@@ -3,14 +3,18 @@
 /**
  * _puts - function that prints a string
  * @str: string
- * Return: void
+ * REturn: void
  */
 
 void _puts(char *str)
 {
-	char *str;
+	int f = 0;
 
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	_puts(str);
-	return (0);
+	while (str[f] != '\0')
+	{
+		_putchar(str[f]);
+		f++;
+	}
+
+	_putchar('\n');
 }
