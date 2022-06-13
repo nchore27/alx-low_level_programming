@@ -15,8 +15,8 @@ void rev_string(char *s)
 
 	while (*(rev++) != '\0')
 		continue;
-	rev = rev -2;
-	for (x =0; x < ln / 2; ++x)
+	rev = rev - 2;
+	for (x = 0; x < ln / 2; ++x)
 	{
 		tmp = s[x];
 		s[x] = rev[0];
@@ -32,7 +32,7 @@ void rev_string(char *s)
 
 int _strlen(char *s)
 {
-	int x =0;
+	int x = 0;
 
 	while (s[x] != '\0')
 	{
