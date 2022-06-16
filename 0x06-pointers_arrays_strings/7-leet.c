@@ -1,12 +1,10 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * leet - function that encodes a string into 1337
  * @n: pointer to array
  * Return: leet
  */
-
 char *leet(char *n)
 {
 	int x = 0, y;
@@ -24,5 +22,6 @@ char *leet(char *n)
 		}
 		++x;
 	}
+
 	return (n);
 }
