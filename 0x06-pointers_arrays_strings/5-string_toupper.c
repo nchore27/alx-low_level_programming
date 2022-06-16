@@ -9,7 +9,7 @@
 
 char *string_toupper(char *f)
 {
-	char *str = f;
+	char *ptr = f;
 
 	while (*f)
 	{
@@ -19,5 +19,5 @@ char *string_toupper(char *f)
 			f++;
 		}
 	}
-	return (str);
+	return (ptr);
 }
