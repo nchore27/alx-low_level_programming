@@ -3,14 +3,13 @@
 
 /**
  * leet - function that encodes a string into 1337
- * @n: string
+ * @n: pointer to array
  * Return: leet
  */
 
 char *leet(char *n)
 {
-	int x, y;
-	x = 0;
+	int x = 0, y;
 	char c1[] = {'a', 'e', 'o', 't', 'l'};
 	char c2[] = {'4', '3', '0', '7', '1'};
 
