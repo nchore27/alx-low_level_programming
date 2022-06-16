@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
  * function appends the src string to the dest string
  * _strcat - function appends the src string to the dest string
@@ -16,6 +18,7 @@ char *_strcat(char *dest, char *src)
 	{
 		x++;
 	}
+	
 	y = 0;
 	while (src[y] != '\0')
 	{
