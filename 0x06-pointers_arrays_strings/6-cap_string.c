@@ -7,41 +7,37 @@
  * Return: always 0
  */
 
-char *cap_string(char *c)
-{
-	int x, y;
-
-	x = 0;
-	char cap[] = ";.!?\"()\t{}\n ";
-	int ln = _strlen(c);
-
-	if (c[x] >= 97 && c[x] <= 122)
-	{
-		c[x] -= 32;
-	}
-	for (x = 0; x < ln; ++x)
-	{
-		for (y = 0; y <  _strlen(cap); ++y)
-		{
-			if (c[x] == cap[y] && c[x + 1] >= 97 && c[x + 1] <= 122)
-			{
-				c[x + 1] -= 32;
-			}
-		}
-	}
-	return (c);
-}
-/**
- * _strlen - function that that returns the length of a string
- * @s : pointer to a string.
- * Return: Length
- */
-int _strlen(char *s)
+char *cap_string(char *n)
 {
 	int x;
 
 	x = 0;
-	while (s[x] != '\0')
-		++x;
-	return (x);
+	if (n[0] >= 'a' && n[0] <= 'z')
+	{
+		n[0] = n[0] - 32;
+	}
+	for (x = 0; n[x] != '\0'; x++)
+	{
+		switch (n[x])
+		{
+			case ',':
+			case ';':
+			case '.':
+			case '!':
+			case '?':
+			case '"':
+			case '(':
+			case ')':
+			case '{':
+			case '}':
+			case ' ':
+			case '\n':
+			case '\t':
+				if (n[x + 1] > 96 && n[x + 1] < 123)
+				{
+					n[x + 1] = n[x + 1] - 32;
+				}
+		}
+	}
+	return (n);
 }
