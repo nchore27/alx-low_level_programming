@@ -3,21 +3,19 @@
 
 /**
  * string_toupper - function that changes all lowercase letters of a string to uppercase
- * @f: Pointer to a string
+ * @s: Pointer to a string
  * Return: 0
  */
 
-char *string_toupper(char *f)
+char *string_toupper(char *s)
 {
-	char *ptr = f;
+	char *ptr = s;
 
-	while (*f)
+	while (*s)
 	{
 		if (*f >= 97 && *f <= 122)
-		{
-			*f -= 32;
-			f++;
-		}
+			*s -= 32;
+		s++;
 	}
 	return (ptr);
 }
