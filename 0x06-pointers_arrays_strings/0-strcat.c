@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * function appends the src string to the dest string
  * _strcat - function appends the src string to the dest string
@@ -7,7 +6,6 @@
  * @src: Pointer
  * REturn: Always 0
  */
-
 char *_strcat(char *dest, char *src)
 {
 	int x;
