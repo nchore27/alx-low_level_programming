@@ -9,10 +9,11 @@
 
 char *leet(char *n)
 {
-	int x = 0, y;
+	int x, y;
+	x = 0;
+
 	char c1[] = {'a', 'e', 'o', 't', 'l'};
 	char c2[] = {'4', '3', '0', '7', '1'};
-
 	while (n[x] != '\0')
 	{
 		for (y = 0; c1[y] != '\0'; y++)
