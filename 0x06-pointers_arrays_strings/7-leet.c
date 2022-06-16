@@ -10,7 +10,6 @@
 char *leet(char *n)
 {
 	int x, y;
-
 	x = 0;
 	char c1[] = {'a', 'e', 'o', 't', 'l'};
 	char c2[] = {'4', '3', '0', '7', '1'};
