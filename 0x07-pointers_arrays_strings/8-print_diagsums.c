@@ -11,7 +11,7 @@ void print_diagsums(int *a, int size)
 	int x;
 	int fn = 0;
 	int fx = 0;
-	int s = size *size;
+	int s = size;
 
 	for (x = 0; x < s; x += size + 1)
 	{
@@ -22,5 +22,6 @@ void print_diagsums(int *a, int size)
 		fn += a[x];
 	}
 
-	printf("%d, %d\n", fn, fx);
+	printf("%d, %d\n", fn);
+	printf("%d, %d\n", fx);
 }
