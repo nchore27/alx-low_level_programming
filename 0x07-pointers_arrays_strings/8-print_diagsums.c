@@ -9,19 +9,19 @@
 void print_diagsums(int *a, int size)
 {
 	int x;
-	int fn = 0;
-	int fx = 0;
-	int s = size;
+	int s1, s2;
 
-	for (x = 0; x < s; x += size + 1)
+	s1 = 0;
+	s2 = 0;
+
+	x = 0;
+	while(x < size)
 	{
-		fn += a[x];
-	}
-	for (x = size - 1; x < s - 1; x += size - 1)
-	{
-		fn += a[x];
+		s1 = s1 + *(a + x * size + x);
+		ss = s2 + *(a + x * size + size - x - 1);
+
+		x++;
 	}
 
-	printf("%d, %d\n", fn);
-	printf("%d, %d\n", fx);
+	printf("%i, %i\n", s1, s2);
 }
