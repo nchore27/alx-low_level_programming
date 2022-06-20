@@ -8,30 +8,18 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int x;
-	unsigned int y;
-	char fn, fx;
+	int x;
+	int y;
+	unsigned int len;
 
-	fx = 0;
-	for (x = 0; *(s + 1) != '\0';)
+	len = 0;
+	for ( x = 0; s[x] != '\0'; ++x)
 	{
-		for (y = 0; *(accept + y) != '\0'; y++)
-		{
-			if (*(s + x) == *(accept + y))
-			{
-				fn = 0;
-				fx = 1;
-				break;
-			}
-			else
-			{
-				fn = 1;
-			}
-		}
-		if (!fn)
-			++x;
-		else
-			break;
+		for (y = 0; accept[y] != '\0' && accept[y] != s[x]; ++y);
+		if (s[x] == accept[y])
+			len++;
+		if (accept[y] == '\0')
+			return (len);
 	}
-	return (fx ? x : 0);
+	return (len);
 }
