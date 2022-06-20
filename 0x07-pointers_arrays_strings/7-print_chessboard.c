@@ -6,8 +6,10 @@
  */
 void print_chessboard(char (*a)[8])
 {
-	unsigned int x = 0, y = 0;
+	int x, y;
 
+	x = 0;
+	y = 0;
 	while (x < 8)
 	{
 		while (y < 8)
@@ -16,7 +18,6 @@ void print_chessboard(char (*a)[8])
 			++y;
 		}
 		_putchar('\n');
-		y = 0;
 		++x;
 	}
 
