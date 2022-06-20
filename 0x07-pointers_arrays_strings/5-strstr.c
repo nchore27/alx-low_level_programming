@@ -9,12 +9,12 @@ char *_strstr(char *haystack, char *needle)
 {
 	unsigned int x, y;
 
-	for (x = 0; *(haystack +1) != '\0'; ++x)
+	for (x = 0; *(haystack + x) != '\0'; ++x)
 	{
 		for (y = 0; *(needle + y) != '\0' && *(needle + y) == *(haystack + x + y);)
 			++j;
 		if (*(needle + y) == '\0')
-			return (haystack + 1);
+			return (haystack + x);
 	}
 	return (*(needle + y) == '\0' ? haystack + x : 0);
 }
