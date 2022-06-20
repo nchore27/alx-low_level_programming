@@ -5,7 +5,7 @@
  * _strstr - function that locates a substring.
  * @haystack: a string.
  * @needle: a substring.
- * Return:  A pointer
+ * Return: A pointer
  */
 
 char *_strstr(char *haystack, char *needle)
