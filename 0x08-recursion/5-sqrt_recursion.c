@@ -1,5 +1,26 @@
 #include "main.h"
 /**
+ * _sqrt - square root of a number
+ * @m: the number to find the root of
+ * @r: to be tested
+ * Return: square root.
+ */
+
+int _sqrt(int m, int r)
+{
+	if ((r * r) == m)
+	{
+		return (r);
+	}
+	if (r == m / 2)
+	{
+		return (-1);
+	}
+	return (_sqrt(m, r + 1));
+}
+
+#include "main.h"
+/**
  * _sqrt_recursion - function that returns the natural square root of a number.
  * @n: number
  * Return: -1
