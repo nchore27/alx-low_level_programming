@@ -19,7 +19,7 @@ int find_strlen(char *s)
 
 /**
  * check_palindrome - Checks if a string is a palindrome
- * @S: String
+ * @s: String
  * @x: Length of s
  * @i: index of string
  * Return: 0
