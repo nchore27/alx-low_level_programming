@@ -34,5 +34,5 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}
-	return (_div(n, d));
+	return (_div(n, x));
 }
