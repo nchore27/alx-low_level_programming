@@ -8,18 +8,15 @@
  * Return: always 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int x, y, j;
-
-	if (argc != 3)
+	if (argc < 3)
 	{
-		puts("Error");
-		return (1);
+		printf("Error\n");
 	}
-	x = atoi(argv[1]);
-	y = atoi(argv[2]);
-	j = x * c;
-	printf("%d\n", j);
+	else
+	{
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	}
 	return (0);
 }
