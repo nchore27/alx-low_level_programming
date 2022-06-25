@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * * _strcat - function appends the src string to the dest string
+ * _strcat - function appends the src string to the dest string
  * @dest: Pointer
  * @src: Pointer
  * Return: dest
