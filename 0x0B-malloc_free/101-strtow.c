@@ -25,7 +25,7 @@ int wrdcnt(char *s)
 }
 /**
  * strtow - function that splits a string into words.
- * @str: a string 
+ * @str: a string
  * Return: NULL if str == NULL or str == ""
  */
 char **strtow(char *str)
