@@ -20,7 +20,7 @@ int _strlen(char *s)
 
 /**
  * str_concat - function that concatenates two strings.
- * @s1: string 
+ * @s1: string
  * @s2: string
  * Return: NULL on Failure
  */
