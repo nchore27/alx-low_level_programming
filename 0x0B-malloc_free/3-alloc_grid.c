@@ -18,7 +18,6 @@ int **alloc_grid(int width, int height)
 	}
 
 	i = malloc(sizeof(int *) * height);
-	/*incase the memory is insifficuent*/
 	if (!i)
 		return (NULL);
 	d = 0;
