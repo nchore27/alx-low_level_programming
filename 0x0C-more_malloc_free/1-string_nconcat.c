@@ -2,6 +2,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * _strlen - function that that returns the length of a string.
+ * @s: pointer
+ * Return: - The length of a string.
+ */
+int _strlen(char *s)
+{
+	int y = 0;
+
+	while (s[y] != '\0')
+	{
+		y++;
+	}
+	return (y);
+}
+
+/**
  * string_nconcat - function that concatenates two strings
  * @s1: string one
  * @s2: string two
