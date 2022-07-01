@@ -23,20 +23,3 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	_memset(fon, 0, size * nmemb);
 	return (fon);
 }
-
-/**
- * _memset - fills memory with a constant byte
- * @b: constant byte
- * @s: memory area
- * @n: bytes of the memory area
- * Return: pointer to the memory area s
- */
-
-char *_memset(char *s, char b, unsigned int n)
-{
-	char *fon = s;
-
-	while (n--)
-		*s++ = b;
-	return (fon);
-}
