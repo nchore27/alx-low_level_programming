@@ -11,15 +11,18 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int x;
-	char *mem;
+	unsigned int x, y;
+	char *call;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	mem = malloc(nmemb * size);
-	if (mem == NULL)
+	y = (nmemb * size);
+	call = malloc(y);
+	if (call == NULL)
 		return (NULL);
-	for (x = 0; x < nmemb * size; ++x)
-		*(memory + x) = 0;
-	return ((void *)mem);
+	for (x = 0; x < y; ++x)
+	{
+		call[x] = 0;
+	}
+	return (call);
 }
