@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * _calloc - unction allocates memory for an array of nmemb
+ * *_calloc - unction allocates memory for an array of nmemb
  * @nmemb: no of elements
  * @size: size of each number
  * Return: Pointer
