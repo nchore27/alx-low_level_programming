@@ -10,40 +10,31 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *res = NULL;
+	char *z;
+	unsigned int x, max = new_size;
+	char *fz = ptr;
 
-	if (new_size == old_size)
-		return (ptr);
-	if (!ptr)
+	if (ptr == NULL)
 	{
-		free(ptr);
-		res = malloc(new_size);
-		return (res);
+		z = malloc(new_size);
+		return (z);
 	}
-	if (!new_size && ptr)
+	else if (new_size == 0)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	res = malloc(new_size);
-	_memcpy(res, ptr, old_size);
+	else if (new_size == old_size)
+	{
+		return (ptr);
+	}
+	z = malloc(new_size);
+	if (z == NULL)
+		return (NULL);
+	if (new_size > old_size)
+		max = old_size;
+	for (x = 0; x < max; ++x)
+		z[x] = fz[x];
 	free(ptr);
-	return (res);
-}
-
-/**
- * _memcpy - copies memory area
- * @dest: destination string
- * @src: source string
- * @n: number of bytes to be copied
- * Return: pointer to dest
- */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-	char *ptr = dest;
-
-	while (n--)
-		*dest++ = *src++;
-	return (ptr);
+	return (z);
 }
