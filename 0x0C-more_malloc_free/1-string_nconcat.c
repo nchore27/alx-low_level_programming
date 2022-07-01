@@ -2,57 +2,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strlen - function that that returns the length of a string.
- * @s: pointer
- * Return: - The length of a string.
+ * string_nconcat - function that concatenates two strings.
+ * @s1: This is the first input string
+ * @s2: This is the second input string
+ * @n: This is the limit to copy the second string to the first string
+ * Return: if the function fails, it should return NULl
  */
-int _strlen(char *s)
-{
-	int y = 0;
-
-	while (s[y] != '\0')
-	{
-		y++;
-	}
-	return (y);
-}
-
-/**
- * string_nconcat - function that concatenates two strings
- * @s1: string one
- * @s2: string two
- * @n: no of bytes
- * Return: Pointer
- */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int f1, f2;
-	unsigned int size, y, index = 0;
-	char *str = NULL;
+	unsigned int x, y;
+	char *String;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	f1 = _strlen(s1);
-	f2 = _strlen(s2);
-	if (n > l2)
-		n = l2;
-	size = f1 + n + 1;
-	str = malloc(size * sizeof(char));
-	if (str == NULL)
+	for (x = 0; s1[x] != '\0'; ++x)
+	{
+	}
+	for (y = 0; s2[y] != '\0'; ++y)
+	{
+	}
+	if (n > y)
+		n = y;
+	String = malloc(((x + n) + 1));
+	if (String == NULL)
 		return (NULL);
-	for (y = 0; y < f1; ++y)
+	for (x = 0; s1[x] != '\0'; ++x)
 	{
-		str[index] = s1[y];
-		index++;
+		String[x] = s1[x];
 	}
-	for (y = 0; y < n; ++y)
+	for (y = 0; y != n; ++y)
 	{
-		str[index] = s2[y];
-		index++;
+		String[x] = s2[y];
+		++x;
 	}
-	str[index] = '\0';
-	return (str);
+	String[x] = '\0';
+	return (String);
 }
