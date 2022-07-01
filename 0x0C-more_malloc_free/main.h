@@ -14,5 +14,9 @@ int onlyNumbers(char *c);
 void multiply(char* s1, char* s2);
 int _atoi(char *s);
 int main(int argc, char *argv[]);
+void _puts(char *str);
+int _atoi(const char *s);
+void print_int(unsigned long int n);
+int main(int argc, char const *argv[]);
 
 #endif

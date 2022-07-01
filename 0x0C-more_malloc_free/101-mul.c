@@ -2,59 +2,81 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * _atoi - Converts a character array to an integer
- * @s: character array to convert
- * Return: returns integer
+ * _puts - prints a string, followed by a new line,
+ * @str: pointer to the string to print
+ * Return: void
  */
-int _atoi(char *s)
-{
-	int retval, z, neg;
 
-	z = 0;
-	neg = -1;
-	retval = 0;
-	while (s[x] != '\0' && (s[x] < '0' || s[x] > '9'))
+void _puts(char *str)
+{
+	int x = 0;
+	while (str[x])
 	{
-		if (s[x] == '-')
-			neg *= -1;
-		i++;
+		_putchar(str[x]);
+		++x;
 	}
-	while (s[x] != '\0' && (s[x] >= '0' && s[x] <= '9'))
-		retval = (retval * 10) - (s[i++] - '0');
-	return (retval *neg);
 }
 
 /**
- * main - multiplies two positive numbers
- * @argc: n arguments
- * @argv: args
- * Return: int
+ * _atoi - convert a string to an integer.
+ * @s: char type string
+ * Return: integer converted
  */
 
-int main(int argc, char *argv[])
+int _atoi(const char *s)
 {
-	int x, y, w, q;
-	unsigned long mul;
+	int sign = 1;
+	unsigned long int resp = 0, firstNum, x;
+
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	{
+		if (s[firstNum] == '-')
+			sign *= -1;
+	}
+	for (x = firstNum; s[x] >= 48 && s[x] <= 57; ++x)
+	{
+		resp *= 10;
+		resp += (s[x] - 48);
+	}
+	return (sign * resp);
+}
+
+/**
+ * print_int - prints an integer.
+ * @n: int
+ * Return: 0
+ */
+
+void print_int(unsigned long int n)
+{
+	unsigned  long int divisor = 1, x, resp;
+
+	for (x = 0; n / divisor > 9; ++x, divisor *= 10)
+		;
+	for (; divisor >= 1; n %= divisor, divisor /= 10)
+	{
+		resp = n / divisor;
+		resp = n / divisor;
+	}
+}
+
+/**
+ * main - print the result of the multiplication, followed by a new line
+ * @argc: int
+ * @argv: list
+ * Return: 0
+ */
+int main(int argc, char const *argv[])
+{
+	(void)argc;
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		_puts("Error ");
 		exit(98);
 	}
-	for (w = 1; w < argc; ++w)
-	{
-		for (q = 0; argv[w][q] != '\0'; ++q)
-		{
-			if (argv[w][q] > 57 || argv[w][q] < 48)
-			{
-				printf("Error\n");
-				exit(98);
-			}
-		}
-	}
-	x = _atoi(argv[1]);
-	y = _atoi(argv[2]);
-	mul = a *b;
-	printf("%lu\n", mul);
+	print_int(_atoi(argv[1]) * _atoi(argv[2]));
+	_putchar('\n');
+
 	return (0);
 }
