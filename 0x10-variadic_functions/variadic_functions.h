@@ -21,5 +21,8 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+void print_ci(va_list v, char *s);
+void print_d(va_list v, char *s);
+void print_s(va_list v, char *s);
 
 #endif
