@@ -7,15 +7,17 @@
 
 void free_listint2(listint_t **head)
 {
-	if (head == NULL)
-		return;
-	while ((*head) != NULL)
-	{
-		listint_t *tmp;
+	listint_t *tmp1, *tmp2;
 
-		tmp = (*head);
-		free(tmp);
-		(*head) = (*head)->next;
+	if (!head || *head == NULL)
+		return;
+
+	tmp1 = *head;
+	while (tmp1 != NULL)
+	{
+		tmp2 = tmp1;
+		tmp1 = tmp1->next;
+		free(tmp2);
 	}
-	(*head) = NULL;
+	*head = NULL;
 }
